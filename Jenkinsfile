@@ -22,7 +22,7 @@ pipeline {
                 script {
                     echo "Running MySoftware.py..."
                     // sh 'python MySoftware.py'
-                    bat 'python MySoftware.py'
+                    bat 'python MySoftware//MySoftware.py'
                 }
             }
         }
