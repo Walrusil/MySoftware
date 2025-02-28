@@ -13,15 +13,9 @@ pipeline {
         stage('Run Script') {
             steps {
                 script {
-                    // Jenkins sets BRANCH_NAME for multibranch pipelines.
-                    if (env.BRANCH_NAME == 'main') {
-                        // For the master branch, simply run the script.
-                        echo "Running MySoftware.py on master branch..."
-                        // sh 'python MySoftware.py'
-                        bat 'python MySoftware.py'
-                    } else {
-                        echo "Branch ${env.BRANCH_NAME} does not trigger any specific action."
-                    }
+                    echo "Running MySoftware.py..."
+                    // sh 'python MySoftware.py'
+                    bat 'python MySoftware.py'
                 }
             }
         }
